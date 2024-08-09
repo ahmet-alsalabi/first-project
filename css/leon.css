@@ -99,17 +99,76 @@ body {
   right: 5px;
   top: -20px;
 }
-.header .links:hover ul  {
+
+.header .links:hover ul {
   display: block;
 
 }
+
 .header .links ul li a {
   display: block;
   padding: 15px;
   text-decoration: none;
-  color: #333 ;
+  color: #333;
   transition: var(--main-duration);
 }
+
 .header .links ul li a:hover {
   padding-left: 25px;
+}
+.header .links ul li:not(:last-child) a {
+  border-bottom: 1px solid #ddd;
+}
+
+.landing {
+  background-image: url(../images/landing.jpg);
+  position: relative;
+  background-size: cover;
+  height: calc(100vh - 64px);
+}
+
+.landing .txt {
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  max-width: 100%;
+}
+.landing .txt h1 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 50px;
+  color: var(--main-color);
+}
+.landing .txt p {
+  font-size: 19px;
+  line-height: 1.8;
+}
+.features {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--section-background);
+}
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+.features .section {
+  padding: 20px;
+  text-align: center;
+}
+.features .section i {
+  color: var(--main-color);
+}
+.features .section h3 {
+  font-weight: 800;
+  margin: 30px 0;
+}
+.features .section p {
+  line-height: 1.8;
+  color: #777;
+  font-size: 17px;
 }
